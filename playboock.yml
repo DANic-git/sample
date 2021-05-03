@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: false
+  become: no
+  vars:
+    ansible_connection: local
+  tasks:
+    - name: "Check Ansible version"
+      debug:
+        var: ansible_version.string
